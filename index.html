@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./dist/css/swiper.css">
+
+    <!-- Demo styles -->
+    <style>
+        /* body {
+           background: #fff;
+           font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+           font-size: 14px;
+           color:#000;
+           margin: 0;
+           padding: 0;
+         }
+         .swiper-container {
+           width: 100%;
+           padding-top: 50px;
+           padding-bottom: 50px;
+         }
+         .swiper-slide {
+           background-position: center;
+           background-size: cover;
+           width: 300px;
+           height: 300px;
+           margin-right:40px;
+
+         }*/
+
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 280px;
+            height: 270px;
+        }
+
+        .swiper-slide-content {
+            width: 272px;
+            opacity: 0.5;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgba(16, 16, 16, 1);
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 1);
+            margin: 0 auto;
+        }
+
+        .swiper-slide-log {
+            padding: 10px 0;
+        }
+
+        .swiper-slide-img {
+            width: 40px;
+            height: 40px;
+            background: red;
+            margin: 0 auto;
+            border-radius: 100%;
+        }
+
+        .swiper-slide-login {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+        .swiper-slide-title > span {
+            left: 143px;
+            top: 227px;
+            width: 89px;
+            height: 22px;
+            line-height: 32px;
+            color: rgba(51, 51, 51, 1);
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .swiper-slide-discount {
+            color: #333333;
+            padding: 8px 0;
+        }
+
+        .swiper-slide-discount > span {
+            font-size: 12px;
+        }
+
+        .swiper-slide-balance {
+
+        }
+
+        .swiper-slide-balance > span:first-child {
+            color: rgba(51, 51, 51, 1);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .swiper-slide-balance > span:last-child {
+            color: rgba(51, 51, 51, 1);
+            font-size: 22px;
+            text-align: left;
+        }
+        .swiper-slide-balance > span{
+            color: rgba(51, 51, 51, 1);
+            font-size: 10px;
+            text-align: center;
+        }
+        .swiper-slide-box{
+            background:#FADADE;
+            padding:3px 0;
+            border-radius: 4px;
+        }
+        .swiper-slide-info{
+            padding-top:10px;
+            padding-bottom:13px;
+            text-align: center;
+        }
+        .swiper-slide-info > span{
+            height: 11px;
+            line-height: 16px;
+            color: rgba(153, 153, 153, 1);
+            font-size: 11px;
+        }
+        .swiper-slide-recharge{
+            width:280px;
+            height:35px;
+        }
+        .swiper-slide-recharge .swiper-slide-sub{
+            width: 280px;
+            height: 35px;
+            line-height: 20px;
+            outline:none;
+            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(212, 174, 129, 1);
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid rgba(212, 174, 129, 1);
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background:#FFF;">
+            <div class="swiper-slide-container">
+                <div class="swiper-slide-box">
+                    <div class="swiper-slide-content">
+                        <div class="swiper-slide-log">
+                            <div class="swiper-slide-img">
+                                <img class="swiper-slide-login" src="img/nature6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide-title">
+                            <span>普通会员</span>
+                        </div>
+                        <div class="swiper-slide-discount">
+                            <span>项目无折扣</span>
+                            <span>|</span>
+                            <span>商品无折扣</span>
+                        </div>
+                        <div class="swiper-slide-balance">
+                            <span>余额￥</span>
+                            <span>15.90</span>
+                        </div>
+                        <div class="swiper-slide-effective">
+                            <span>长期有效</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide-info">
+                    <span>级别越高优惠越多！</span>
+                </div>
+                <div class="swiper-slide-recharge">
+                    <input class="swiper-slide-sub" type="button" value="充值"/>
+                </div>
+            </div>
+        </div>
+        <!--<div class="swiper-slide" style="background-image:url(img/nature2.jpg)">
+            <div class="swiper-slide-content">
+
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(img/nature3.jpg)">
+            <div class="swiper-slide-content">
+
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(img/nature4.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature5.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature6.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature7.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature8.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature9.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature10.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature1.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature2.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature3.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature4.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature5.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature6.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature7.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature8.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature9.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(img/nature10.jpg)"></div>-->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="./dist/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -50,
+            depth: 260,
+            modifier: 2,
+            slideShadows: true
+        },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+
+    /*
+
+    rotate: 30,
+    stretch: 10,
+    depth: 60,
+    modifier: 2,
+    slideShadows : true
+
+
+    */
+</script>
+</body>
+</html>
